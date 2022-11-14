@@ -8,5 +8,41 @@
 </head>
 <body>
     
+    <div class="wrapOne">
+
+        <div class="box-add">
+            <input type="text" class="extInp" id="extInp" placeholder="Name of product">
+            <input type="text" class="codeInp" id="codeInp" placeholder="Code of product">
+            <button class="sendToServ" id="sendToServ">Send to server</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        sendToServ.onclick = function(){
+            const data = {
+                extProduct: extInp.value,
+                codeProduct: codeInp.value
+            }
+            sendInfoForm(data)
+        }
+
+        function sendInfoForm (formData){
+            const form = document.getElementById('form');
+            fetch('send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(_ =>{
+                form.reset()
+            })
+            .catch(error => console.log(error));
+        }
+    
+    </script>
 </body>
 </html>
