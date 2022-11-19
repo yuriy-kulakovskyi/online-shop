@@ -9,5 +9,12 @@ mongoose.connect('mongodb+srv://yura:online-shop@shop-cluster.inq9dxh.mongodb.ne
 app.use('/', (req, res) => {
   res.send("Hi");
 });
-
+app.post('/send', async (req,res)=>{
+  const {extProduct, codeProduct}=req.body;
+  try{
+    res.send(req.body);
+  } catch (error){
+    console.log(error);
+  } 
+});
 app.listen(3000, () => console.log("Server is listening on port 3000"));
