@@ -15,7 +15,6 @@ mongoose.connect('mongodb+srv://yura:online-shop@shop-cluster.inq9dxh.mongodb.ne
 app.post('/send', async (req,res)=>{
 
   const {extProduct, codeProduct}=req.body;
-  console.log(extProduct);
   const good = new GoodModel({name: extProduct, code: codeProduct});
 
   try{
