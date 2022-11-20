@@ -1,0 +1,25 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "description": "Internet shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuriy-kulakovskyi/online-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuriy-kulakovskyi/online-shop/issues"
+  },
+  "homepage": "https://github.com/yuriy-kulakovskyi/online-shop#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  }
+}

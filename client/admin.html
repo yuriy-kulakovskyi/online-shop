@@ -30,7 +30,7 @@
 
         function sendInfoForm (formData){
             const form = document.getElementById('form');
-            fetch('send', {
+            fetch('http://localhost:3000/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
