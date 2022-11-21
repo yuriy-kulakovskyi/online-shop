@@ -8,9 +8,11 @@ const GoodModel = require("./models/good");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://yura:online-shop@shop-cluster.inq9dxh.mongodb.net/?retryWrites=true&w=majority', (err) => {
-  console.log(err);
-});
+mongoose.connect('mongodb+srv://yura:online-shop@shop-cluster.inq9dxh.mongodb.net/?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+  }
+);
 
 app.post('/send', async (req,res)=>{
 
